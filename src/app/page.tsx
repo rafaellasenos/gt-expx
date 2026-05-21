@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { createClient } from '@/lib/supabase/client'
 import { Input } from '@/components/Input'
 import { Button } from '@/components/Button'
@@ -90,12 +91,18 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-600 mb-4">
-            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.362a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
-            </svg>
+          <div className="inline-flex items-center justify-center rounded-2xl bg-gray-900 px-6 py-3 mb-6">
+            <Image
+              src="/logo-expx.png"
+              alt="EXPX"
+              width={120}
+              height={31}
+              priority
+            />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">{meetingTitle}</h1>
+          <h1 className="text-4xl font-bold text-gray-900 leading-tight">
+            Pronto para<br />o GT de hoje?
+          </h1>
           <p className="text-gray-500 text-sm mt-2">
             Preencha seus dados para entrar na reunião
           </p>
